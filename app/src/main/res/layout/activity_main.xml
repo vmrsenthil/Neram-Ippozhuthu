@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.sample.drawclock.MainActivity"
+        android:background="@android:color/white"
+    android:layout_gravity="center_horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <com.sample.drawclock.Clock
+            android:id="@+id/clock"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"/>
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/tablelayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+        <EditText
+            android:id="@+id/hour"
+            android:inputType="number"
+            android:textSize="20dp"
+            android:width="40dp"
+            android:maxLength="2"/>
+        <EditText
+            android:inputType="number"
+            android:textSize="20dp"
+            android:id="@+id/minutes"
+            android:width="40dp"
+            android:maxLength="2"/>
+
+        <Button
+            android:id="@+id/btn_check"
+            android:text="Check"
+            android:onClick="check"
+            android:layout_width="wrap_content"
+            android:background="@drawable/button_style"/>
+
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1">
+        <TextView
+            android:text="Hour"
+            android:width="40dp"/>
+        <TextView
+            android:text="Mins"
+            android:width="40dp"/>
+    </TableRow>
+
+
+    </TableLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/result"
+            android:textSize="20dp"/>
+    </LinearLayout>
+</LinearLayout>
+
+
+
